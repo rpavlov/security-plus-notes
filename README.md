@@ -3,7 +3,7 @@
 My personal notes spanning the various topics of the CompTIA Security+ certification.
 
 1. [Fundamentals](fundamentals/fundamentals.md)
-2. [Identifying Threats & vulnerabilities](identifying/identifying.md)
+2. [Identifying Threats & vulnerabilities](threats/threats.md)
 3. [Managing data, application and host security](data/data.md)
 4. [Network security](fundamentals/fundamentals.md)
 5. [Compliance and operational security](compliance/compliance.md)
