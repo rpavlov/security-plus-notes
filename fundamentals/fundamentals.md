@@ -145,4 +145,4 @@ Hiding information inside a picture. It's a kind of cipher. In hex editors, all 
 
 ### Policy
 
-Falls under administrative security (recall the other two are technical and physical).
+Falls under administrative security (recall the other two are technical and physical). These are the business functions that secure your data.
