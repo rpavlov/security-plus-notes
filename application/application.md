@@ -9,3 +9,7 @@ Nessus is solid for vulnerability scanning.
 ## Data
 
 Encryption at rest and in transit.
+
+## Static code analysis
+
+## Dynamic code analysis
