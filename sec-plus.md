@@ -75,18 +75,74 @@ Another importat aspect of an RMF is the security policies of the org. A basic e
 
 ### Module 1-3: Security Controls
 
-Phase Controls
+#### Phase Controls
 
-Control Types
+It’s helpful to categorize security controls based on when they work relative to the phase of an attack.
 
-Security Control Strategies
-Module 1-4: Risk Assessment
+* A deterrent control is designed to deter a potential attacker from even attempting an attack.
 
-Concepts of Risk Assessment
+![deterrent](deterrent.png)
 
-Quantitative Assessment
+* A detective control works during an attack. As the name implies, these controls actively look for an attack and alert security professionals to the presence of an active, ongoing attack. An IDS or SIEM is one such deterrent.
+* A corrective control applies after an attack has taken place and fixes/mitigates the result of the incident.
+* Sometimes you need to provide a temporary solution to a vulnerability that’s less than optimal. You use compensating controls to keep going until a better control is available or possible.
+* A preventative control attempts to keep an active attack from succeeding. The earlier example of using a 20-character password on WPA2 is a great example of a preventative control.
 
-Qualitative Assessment
+#### Control Types
+
+* Technical controls are security controls applied to technology.
+* Administrative controls are applied to people.
+* Physical controls are applied to secure physical areas from physical access by unauthorized people.
+
+#### Security Control Strategies
+
+##### Defense in Depth/Layered Security
+
+Every IT infrastructure might be looked at as a series of concentric shells. For example, below we have layered security for a physical control.
+
+![layers](layers.png)
+
+Doing the same exercise, we have layered technical controls for network intrusion.
+
+![layers2](layers2.png)
+
+##### Vendor diversity
+
+When IT professionals find a vendor they like and know, they tend to stick with that vendor. While using a single vendor has conveniences, it also creates a single point of failure that needs to be considered.
+
+##### Control diversity
+
+Control diversity means to combine different types of controls to provide better security. A password policy is an example of technical and admin controls.
+
+##### User training
+
+User training covers critical issues such as password usage, personal security, and, probably most importantly, the ability to recognize attacks.
+
+## Module 1-4: Risk Assessment
+
+### Concepts of Risk Assessment
+
+#### Risk assessment methodology
+
+The Risk IT Framework by NIST provides a way to do assessments. However, its strongly encouraged that orgs hire IT risk specialists.
+
+1. Prepare for assessment.
+2. Conduct assessment:
+    * Identify threat sources and events.
+    * Identify vulnerabilities and predisposing conditions.
+    * Determine likelihood of occurrence.
+    * Determine magnitude of impact.
+    * Determine risk.
+3. Communicate results.
+4. Maintain assessment.
+
+##### Identifying Threat Sources/Events
+
+![threat-sources](threat-sources.png)
+
+### Quantitative Assessment
+
+### Qualitative Assessment
 
 Putting It All Together: Determining Risk
 
