@@ -208,7 +208,9 @@ After you’ve identified and analyzed risk for assets and the organization, you
 
 * Risk mitigation is an attempt to reduce risk, or at least minimize its effects on an asset. This may mean reducing the likelihood of occurrence, reducing or eliminating the exposure of the vulnerability, or reducing the impact if a negative event does occur. Mitigation usually involves adding security controls to protect an asset against a threat, reducing likelihood, exposure, or impact in some way. Keep in mind that risk can never be fully eliminated.
 
-* Risk transference (also sometimes called risk sharing) deals with risk by sharing the burden of the risk. An example of risk sharing is buying insurance, which in turn reduces the impact. Another example of risk sharing using 3rd party providers
+* Risk transference (also sometimes called risk sharing) deals with risk by sharing the burden of the risk. An example of risk sharing is buying insurance, which in turn reduces the impact. Another example of risk sharing using 3rd party providers. A caveat about this is: Transferring risk does not also mean transferring legal responsibility or liability from the organization. Ultimately, the responsibility for protecting data and following legal governance still belongs to the organization.
+
+*
 
 
 
