@@ -109,7 +109,7 @@ Control diversity means to combine different types of controls to provide better
 
 User training covers critical issues such as password usage, personal security, and, probably most importantly, the ability to recognize attacks.
 
-## Module 1-4: Risk Assessment
+## Risk Assessment
 
 ### Concepts of Risk Assessment
 
@@ -198,6 +198,8 @@ Putting It All Together: Determining Risk
 
 ### Risk Response
 
+![shred2](sponge3.jpg)
+
 After you’ve identified and analyzed risk for assets and the organization, you must then decide how to respond to the risks produced as a result of the analysis. Responding to risk means to attempt to minimize its effects on the organization. Risk response techniques fall into four categories:
 
 * Risk mitigation is an attempt to reduce risk, or at least minimize its effects on an asset. This may mean reducing the likelihood of occurrence, reducing or eliminating the exposure of the vulnerability, or reducing the impact if a negative event does occur. Mitigation usually involves adding security controls to protect an asset against a threat, reducing likelihood, exposure, or impact in some way. Keep in mind that risk can never be fully eliminated.
@@ -213,6 +215,8 @@ Often, an organization will use a combination of these responses to address the 
 ## Business Impact Analysis
 
 A business impact analysis (BIA) predicts both the consequences of incidents and the time and resources needed to recover from incidents. NIST offers another template for perofrming a BIA:
+
+![shred2](sponge2.jpg)
 
 1. Determine mission/business processes and recovery criticality. Mission/Business processes supported by the system are identified and the impact of a system disruption to those processes is determined along with outage impacts and estimated downtime.
 
@@ -291,7 +295,7 @@ Privacy Officer   When an organization has data that is subject to privacy laws 
 
 ### Legal & compliance
 
-Most countries have laws, regulations, and standards designed to protect different forms of data. As introduced in Module 1-2, in the United States, the Health Insurance Portability and Accountability Act (HIPAA), PIPEDA in Canada, and PCI-DSS for credit cards.
+Most countries have laws, regulations, and standards designed to protect different forms of data.  In the United States, the Health Insurance Portability and Accountability Act (HIPAA), PIPEDA in Canada, and PCI-DSS for credit cards.
 
 ### Personally identifiable information
 
@@ -330,4 +334,36 @@ For electronic media, formatting is not enough to evade forensics. There are spe
 ![shred2](shred2.png)
 
 The exam has a whole chapter on data sanitizing.
+
+## Third-party risk
+
+When you negotiate a contract with a third-party provider or business partner, you must ensure that several considerations are specified in your business agreements. You should definitely have representatives from your security, privacy, and legal departments review any business agreements with third parties to ensure that certain security-related stipulations are included in the agreements and the day-to-day business transactions with outside entities.
+
+### Security Policy and Procedures
+
+Although your organization should have its own security policies, procedures, and processes, third-party organizations usually have their own as well. Sometimes these policies and procedures conflict between the parties and have to be negotiated, resolving any differences between them, in advance.
+
+### Privacy considerations
+
+Privacy is a serious consideration when exchanging data with any third party. If you contract services with a third party, make sure to agree on data privacy prior to entering into any business agreements. Privacy considerations include employee data privacy; privacy related to the type of data itself, such as financial data, personally identifiable information (PII), and protected health information (PHI); and how the third party will treat this data.
+
+### Risk awareness
+
+Many organizations require that third-party providers or business associates have an established risk management program that includes threat and vulnerability assessments, risk mitigation strategies, and so on.
+
+### Agreement Types
+
+![sponge4](sponge4.jpg)
+
+* A sales and purchase agreement (SPA) is a legal document obligating a buyer to buy and a seller to sell a product or service. SPAs are critical and common for large, complex purchases. An SPA not only defines prices, but payment amounts and time frames for deposits. On the seller’s side, an SPA defines how and when the property is to be transferred to the seller, acceptable condition of the goods or services, and any details that might impede the transfer.
+
+* A service level agreement (SLA) is a legal document that defines the expectations for services that a third-party provider will guarantee to the organization. The provider guarantees the service they provide to be up and running and usable by the organization, either for a certain percentage of time or to a certain level of standards. If the provider is storing or processing data for the organization, the SLA may state that the data will be available in a particular format, through a particular application or system, in a specified format, and to authorized users within the organization. Time is an important element for an SLA—length of time of the agreement, uptime guarantees, and response time for problems.
+
+* The business partners agreement (BPA) specifies what type of relationships the different parties will have, usually from a legal perspective. An entirely separate company may be established for the business venture, combining elements of both individual businesses; this is usually for long-term or large-scale ventures. A BPA rarely has a time frame but it will have clear methods for ending the partnership.
+
+* A memorandum of understanding (MOU), sometimes called a memorandum of agreement (MOA), is a document often used within a large business or government agency that establishes an agreement between two independently managed parties that may be working together on a project or business venture.
+
+* Telecommunication companies will use an interconnection security agreement (ISA) when connecting to each other’s network to handle essential details about technology and personnel. An ISA is not a legal document used to cover technical issues between two parties. An ISA may detail how two independently owned and managed network infrastructures are connected to each other.
+
+
 
