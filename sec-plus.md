@@ -1,5 +1,7 @@
 # Sec+ lunch & learn
 
+![sponge1](sponge1.jpg)
+
 I am reading through Mike Meyer's Sec+ certification guide, and will provide a condensed summary of the section dealing with risk management.
 
 Personally, I find risk management interesting because its a tool for dealing with the inevitable, and a way to manage eventualities. It's also useful because it forces you to think about long term strategies and have a plan in place for when you do eventually get breached. Disaster recovery is itself a huge field, and a subset of risk management.
@@ -210,7 +212,130 @@ After you’ve identified and analyzed risk for assets and the organization, you
 
 * Risk transference (also sometimes called risk sharing) deals with risk by sharing the burden of the risk. An example of risk sharing is buying insurance, which in turn reduces the impact. Another example of risk sharing using 3rd party providers. A caveat about this is: Transferring risk does not also mean transferring legal responsibility or liability from the organization. Ultimately, the responsibility for protecting data and following legal governance still belongs to the organization.
 
-*
+* Risk acceptance means the organization has implemented controls and some risk remains. It does not mean simply accepting an identified risk without taking any action to reduce its effects on the organization. Risk acceptance isn’t the act of ignoring risk. Residual risk is what remains after a firm has reduced the risk and impact to acceptable levels.
 
+* Risk avoidance means that the organization could choose not to participate in activities that cause unnecessary or excessive risk. Note that this doesn’t mean that the risk is ignored and that the organization does not take steps to reduce it. In some cases, a business pursuit or activity may be too risky to undertake, for example.
 
+Often, an organization will use a combination of these responses to address the many and varied risks it encounters; there is no one perfect response solution that fits all organizations, assets, and activities. The decision of how to respond to a particular risk scenario involves many complex factors, which include cost, effectiveness of the response, value of the asset, and the ability of the organization to implement a particular response successfully.
+
+## Business Impact Analysis
+
+A business impact analysis (BIA) predicts both the consequences of incidents and the time and resources needed to recover from incidents. NIST offers another template for perofrming a BIA:
+
+1. Determine mission/business processes and recovery criticality. Mission/Business processes supported by the system are identified and the impact of a system disruption to those processes is determined along with outage impacts and estimated downtime.
+
+Make sure you know which workflows and processes your organization depends on to operate, in other words, the mission-essential functions. Determine the types of impact and consider the impact of the failure of each of these workflows and processes. Estimate how long it takes to bring those workflows and processes up to speed.
+
+2. Identify resource requirements. Realistic recovery efforts require a thorough evaluation of the resources required to resume mission/business processes and related interdependencies as quickly as possible.
+
+What are the critical tools your organization uses to do these workflows and processes? Where are they? How do they work? In other words, a BIA provides identification of critical systems.
+
+3. Identify recovery priorities for system resources. Based upon the results from the previous activities, system resources can be linked more clearly to critical mission/business processes and functions. Priority levels can be established for sequencing recovery activities and resources.
+
+Once you understand all the resources that together make a particular workflow/process work, determine the priority of bringing them back up to speed if they fail.
+
+### Types of Impact
+
+* Financial
+* Reputation
+* Property
+* Safety/life
+* Privacy
+
+### Locating critical resources
+
+For example, our internet access relies on 4 basic resources, with several single points of failure:
+
+* Cable modem Add a second ISP into the mix. This could act as a failover if the primary ISP fails.
+
+* Edge router Cisco produces very reliable routers, but a quick check of the Cisco Web site shows the router model used by Totalsem accepts dual power supplies. This will help increase the MTBF (see the next section) significantly.
+
+* DNS server A single DNS server is never a good idea. Totalsem could add a second DNS server or create a secondary lookup zone on a cloud server.
+
+* NAT router Totalsem uses a low-quality router, but has spares ready to go. There will be a time impact to install the replacement, but having the spare onsite is far better than running to the store.
+
+### Calculating Impact
+
+In the context of hardware, the exam touches on 3 qualitative factors to calculate business impact:
+
+* MTBF Mean time between failures (of one major component). Typically time between repairs of a major component failure.
+* MTTF: Mean time to failure (length of time device expected to operate). Typically time between replacement of entire device.
+* MTTR: Mean time to recovery.
+
+![mttf](mttf.png)
+
+### Calculating downtime
+
+The RTO and RPO help IT professionals calculate how much an organization can or will lose if a system goes down before backup systems can be brought online.
+
+* Recovery time objective (RTO) is the maximum amount of time that a resource may remain unavailable before an unacceptable impact on other system resources occurs
+* Recovery point objective (RPO) defines the amount of time that will pass between an incident and recovery from backup.
+
+If a company backed up yesterday, for example, the RPO is 24 hours.
+
+## Data security and privacy policies
+
+### Data organization and sensitivty
+
+The first step to dealing with data security is organization. Analyze individual chunks of data, such as databases, spreadsheets, access control lists, and so on. Then determine the importance—the sensitivity—of that data. After accomplishing both tasks, sort the data into different classifications based on sensitivity. These classifications help security professionals to determine the amount of security control to apply to each data set.
+
+One way to consider sensitivity is by the impact of an incident that exposes the data:
+
+![sensitivity](sensitivity.png)
+
+### Data labeling
+
+Confidential, private, proprietary, public or internet, internal use, restricted, sensitive as an example of custom labels.
+
+### Data roles
+
+Data Owner   The data owner is the entity who holds the legal ownership of a data set. This includes any copyrights, trademarks, or other legal possession items that tie the data set to the entity. The data owner can rent, sell, or give away the data set as the owner sees fit. Data owners are almost always the organization itself and not an actual person. This entity has complete control over the data and will delegate responsibility for the management of that data set to persons or groups to handle the real work on that data.
+
+Data Custodian   A data custodian ensures that the technical aspects of the data set are in good order. Data custodians are the folks who make sure the data is secure, available, and accurate. They audit the data and ensure they have both the appropriate storage capacity and proper backups.
+
+Data Steward   A data steward makes sure that the data set does what the data is supposed to do for the organization. Data stewards interface with the users of the organization to cover data requirements, to define the metadata, and to make sure the data ties to company or industry standards. Data stewards update the data as needed to conform to needs. Data stewards also define how users access the data.
+
+Privacy Officer   When an organization has data that is subject to privacy laws and regulations (a big issue here in the United States), it will assign a privacy officer to oversee that data. Privacy officers perform the due diligence to make sure that the data’s storage, retention, and use conform to any and all laws and regulations. We’ll see more of this person in the next section.
+
+### Legal & compliance
+
+Most countries have laws, regulations, and standards designed to protect different forms of data. As introduced in Module 1-2, in the United States, the Health Insurance Portability and Accountability Act (HIPAA), PIPEDA in Canada, and PCI-DSS for credit cards.
+
+### Personally identifiable information
+
+* Name, such as full name, maiden name, mother’s maiden name, or alias
+
+* Personal identification numbers, such as Social Security number (SSN), passport number, driver’s license number, taxpayer identification number, or financial account or credit card number
+
+* Address information, such as street address or e-mail address
+
+* Personal characteristics, including photographic image (especially of face or other identifying characteristic), fingerprints, handwriting, or other biometric data (e.g., retina scan, voice signature, facial geometry)
+
+* Information about an individual that is linked or linkable to one of the above (e.g., date of birth, place of birth, race, religion, weight, activities, geographical indicators, employment information, medical information, education information, financial information)
+
+### Protected health information
+
+(PHI) is any form of personal health information (treatment, diagnosis, prescriptions, etc.) electronically stored or transmitted by any health provider, insurer, or employer. This health information must be tied to the individual’s PII to be considered PHI. In other words, a blood pressure reading combined with age and race is alone not PHI. A blood pressure reading combined with a name or an address or SSN is PHI.
+
+### Data retention
+
+In the US, The Sarbanes-Oxley Act is easily the most far-reaching law affecting the types of data public companies must retain and the length of time they must retain that data:
+
+```Whoever knowingly alters, destroys, mutilates, conceals, covers up, falsifies, or makes a false entry in any record, document, or tangible object with the intent to impede, obstruct, or influence the investigation … shall be fined under this title, imprisoned not more than 20 years, or both.```
+
+```Any accountant who conducts an audit of an issuer of securities … shall maintain all audit or review workpapers for a period of 5 years from the end of the fiscal period in which the audit or review was concluded.```
+
+### Data destruction
+
+Stored data fits into one of two categories: legacy media (paper, film, tape, etc.) or electronic media (hard drives, SD cards, optical media, etc.). Each of these categories have different methods for data destruction.
+
+For legacy media, destroy it through burning or pulping.
+
+For electronic media, formatting is not enough to evade forensics. There are specialized programs, but to be certain you need to degauss with an electromagent and then pulverize or shred.
+
+![shred1](shred1.png)
+
+![shred2](shred2.png)
+
+The exam has a whole chapter on data sanitizing.
 
