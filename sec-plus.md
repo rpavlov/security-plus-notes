@@ -2,14 +2,6 @@
 
 ![sponge1](sponge1.jpg)
 
-I am reading through Mike Meyer's Sec+ certification guide, and will provide a condensed summary of the section dealing with risk management.
-
-Personally, I find risk management interesting because its a tool for dealing with the inevitable, and a way to manage eventualities. It's also useful because it forces you to think about long term strategies and have a plan in place for when you do eventually get breached. Disaster recovery is itself a huge field, and a subset of risk management.
-
-In general, Security's job shouldn't be to say no. That would be easy, because abstinence is the best policy and always works. We can just disconnect the company's infrastructure from the internet and call it a day.
-
-Security's job is to perform risk anaylsis and make concessions where applicable, as well as prioritize the most important assets and figure out where to allocate money that generates the most value in terms of protection.
-
 ## Risk Management
 
 Risk management is the science of identifying and categorizing risks and then systematically applying resources to these risks to minimize their impact on an organization.
