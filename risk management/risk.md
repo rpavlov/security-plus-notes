@@ -1,5 +1,7 @@
 # Risk management
 
+These notes are from the Stackskills course.
+
 ## Asset evaluation
 
 Delphi technique is used to evaluate information assets. Needs
