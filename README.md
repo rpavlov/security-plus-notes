@@ -2,6 +2,7 @@
 
 My personal notes spanning the various topics of the CompTIA Security+ certification.
 
+0. [Misc Notes](misc-notes.md)
 1. [Fundamentals](fundamentals/fundamentals.md)
 2. [Cryptography](cryptography/cryptography.md)
 3. [Managing data, application and host security](application/application.md)
